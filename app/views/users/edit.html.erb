@@ -1,2 +1,14 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link')%>
+
+<div class = "users edit">
+	<h2>Update User</h2>
+	
+	<%= form_for(:user, :url => {:action => 'update', :id => @user.id}) do |f|%>
+
+		<%= render(:partial => "form", :locals => {:f => f}) %>
+		
+		<div class="form-buttons">
+		<%= submit_tag("Update User") %>
+		</div>
+	<% end %>
+</div>

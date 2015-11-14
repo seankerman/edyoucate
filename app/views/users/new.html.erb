@@ -1,2 +1,14 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link')%>
+
+<div class = "users new">
+	<h2>Create User</h2>
+	
+	<%= form_for(:user, :url => {:action => 'create'}) do |f|%>
+		
+		<%= render(:partial => "form", :locals => {:f => f}) %>
+		
+		<div class="form-buttons">
+		<%= submit_tag("Create User") %>
+		</div>
+	<% end %>
+</div>
