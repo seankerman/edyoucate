@@ -1,0 +1,16 @@
+<h1>edYOUcate Home Page!</h1>
+<div class="static links">
+	<table class="listing" summary="static list">
+		<tr class="header">
+			<th>Footer</th>
+		</tr>
+		<tr class="<%= cycle('odd', 'even') %>">
+			<td class="actions">
+				<%= link_to("About", {:action => 'about'}, :class => 'static link')%>
+				<%= link_to("Contact", {:action => 'about'}, :class => 'static link')%>
+				<%= link_to("Privacy", {:action => 'privacy'}, :class => 'static link')%>
+				<%= link_to("Terms", {:action => 'terms'}, :class => 'static link')%>
+			</td>
+		</tr>
+	</table>
+</div>

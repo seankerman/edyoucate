@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+
+  get 'pages/about'
+
+  get 'pages/contact'
+
+  get 'pages/terms'
+
+  get 'pages/privacy'
+
   get 'courses/delete'
 
   get 'courses/edit'
