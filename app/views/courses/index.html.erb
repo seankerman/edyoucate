@@ -1,0 +1,24 @@
+<% @page_title = "Courses"%>
+
+<div class="courses index">
+	<h2>Courses</h2>
+	
+	<%= link_to(image_tag('plus_sign.jpg', :size => '11x11', :alt => '+') + " Add new Course", {:action => 'new'}, :class => 'action new')%>
+	
+	<div><%= pluralize(@courses.size, 'course') %> found</div>
+	<table class="listing" summary="Course list">
+		<tr class="header">
+			<th>Course</th>
+		</tr>
+		<% @courses.each do |course| %>
+		<tr class="<%= cycle('odd', 'even') %>">
+			<td><%= course.name%></td>
+			<td class="actions">
+				<%= link_to("Show", {:action => 'show', :id => course.id}, :class => 'action show')%>
+				<%= link_to("Edit", {:action => 'edit', :id => course.id}, :class => 'action edit')%>
+				<%= link_to("Delete", {:action => 'delete', :id => course.id}, :class => 'action delete')%>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+</div>
