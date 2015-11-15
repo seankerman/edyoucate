@@ -48,7 +48,7 @@ class UsersController < ApplicationController
 
   def destroy
     user = User.find(params[:id]).destroy
-    flash[:notice] = "User destoryed successfully"
+    flash[:notice] = "User '#{user.username}' destoryed successfully"
     redirect_to(:action => 'index')
   end
 
@@ -58,6 +58,6 @@ class UsersController < ApplicationController
       # same as using "params[:subject]", except that it:
       # - raises an error if :subject is not present
       # - allows listed attributes to be mass-assigned
-      params.require(:user).permit(:name, :created_at)
+      params.require(:user).permit(:first_name, :last_name, :email, :username, :password, :created_at)
     end
 end
