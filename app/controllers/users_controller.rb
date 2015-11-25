@@ -5,6 +5,10 @@ class UsersController < ApplicationController
     @users = User.sorted
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def new
     @user = User.new
     @user_count = User.count + 1
