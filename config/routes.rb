@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   #get 'users/delete'
 
-  root 'demo#home'
+  root 'pages#home'
   #get 'demo/home'
 
   match ':controller(/:action(/:id))', :via => [:get, :post]
