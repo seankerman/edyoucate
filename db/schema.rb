@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151115041151) do
+ActiveRecord::Schema.define(version: 20151126151825) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "name"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20151115041151) do
     t.string   "email",           limit: 100
     t.string   "username",        limit: 25
     t.string   "password_digest"
+    t.integer  "role"
   end
 
 end

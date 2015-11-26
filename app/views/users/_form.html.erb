@@ -20,7 +20,10 @@
 		<th> <%= f.label(:email) %></th>
 		<td><%= f.text_field(:email) %></td>
 	</tr>
-
+	<tr>
+		<th> <%= f.label(:role) %></th>
+		<td><%= f.select :role, User.roles.keys.to_a %></td>
+	</tr>
 	<tr>
 		<th> <%= f.label(:password) %></th>
 		<td><%= f.password_field(:password) %></td>

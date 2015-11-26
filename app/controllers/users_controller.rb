@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   
-
   def index
     @users = User.sorted
   end
@@ -57,11 +56,17 @@ class UsersController < ApplicationController
   end
 
   private
-    
+
+  def admin_only
+    unless current_user.admin?
+      redirect_to :back, :alert => "Access denied."
+    end
+  end
+
     def user_params
       # same as using "params[:subject]", except that it:
       # - raises an error if :subject is not present
       # - allows listed attributes to be mass-assigned
-      params.require(:user).permit(:first_name, :last_name, :email, :username, :password, :created_at)
+      params.require(:user).permit(:first_name, :last_name, :email, :username, :password, :created_at, :role)
     end
 end
