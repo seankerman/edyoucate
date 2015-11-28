@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
 	has_secure_password
-
+	has_attached_file :image, styles: { large: "600x600>", medium: "300x300>", thumb: "100x100#"}
 	enum role: [:user, :teacher, :admin]
 
 	after_initialize :set_default_role, :if => :new_record?
@@ -19,6 +19,9 @@ class User < ActiveRecord::Base
   						 :length => { :maximum => 25 }
 	validates :last_name, :presence => true,
 							:length => { :maximum => 50 }
+	validates :image, :attachment_presence => true
+	validates_attachment :image, :size => { :in => 0..10000.kilobytes}
+	validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 	validates :username, :presence => true,
 						   :length => { :within => 5..25 },
 						   :uniqueness => true

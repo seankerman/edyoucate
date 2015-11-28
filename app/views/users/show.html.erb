@@ -2,7 +2,8 @@
 
 <div class="users show">
 	<h2>Show User</h2>
-	
+	<td> <%= link_to image_tag(@user.image.url(:medium)), @user.image.url %></td>
+
 	<table summary="Subject detail view">
 		<tr>
 			<th>First Name</th>

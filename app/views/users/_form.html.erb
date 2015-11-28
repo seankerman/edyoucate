@@ -10,7 +10,10 @@
 		<th> <%= f.label(:last_name, "Last Name") %></th>
 		<td><%= f.text_field(:last_name) %></td>
 	</tr>
-
+	 <div class="field">
+	    <th> <%= f.label :image %> </th>
+	    <td> <%= f.file_field :image %> </td>
+    </div>
 	<tr>
 		<th> <%= f.label(:username, "User Name") %></th>
 		<td><%= f.text_field(:username) %></td>

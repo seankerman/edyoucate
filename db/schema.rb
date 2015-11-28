@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151126151825) do
+ActiveRecord::Schema.define(version: 20151128003019) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "name"
@@ -20,14 +20,18 @@ ActiveRecord::Schema.define(version: 20151126151825) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.string   "first_name",      limit: 25
-    t.string   "last_name",       limit: 50
-    t.string   "email",           limit: 100
-    t.string   "username",        limit: 25
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "first_name",         limit: 25
+    t.string   "last_name",          limit: 50
+    t.string   "email",              limit: 100
+    t.string   "username",           limit: 25
     t.string   "password_digest"
     t.integer  "role"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end

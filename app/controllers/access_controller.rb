@@ -34,7 +34,7 @@ class AccessController < ApplicationController
 	session[:user_id] = nil
 	session[:username] = nil
   	flash[:notice] = "Logged out"
-  	redirect_to(:action => "login")
+  	redirect_to(:controller => 'pages', :action => 'home')
   end
 
 
