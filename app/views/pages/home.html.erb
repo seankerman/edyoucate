@@ -1,25 +1,5 @@
-<h1>edYOUcate Home Page!</h1>
-
 <div class="static links">
-	<% unless user_signed_in? %>
-		<%= link_to("Login", {:controller => 'access', :action => 'login'}) %>	
-		<%= link_to("Create Account", {:controller => 'users', :action => 'new'}) %>
-	<% else %>
-		<%= link_to("Logout", {:controller => 'access', :action => 'logout'}) %>	
-		<%= link_to("Your Account", {:controller => 'users', :action => 'show', :id => session[:user_id]}) %>
-	<% end %>
 
-	<table class="listing" summary="static list">
-		<tr class="header">
-			<th>Footer</th>
-		</tr>
-		<tr class="<%= cycle('odd', 'even') %>">
-			<td class="actions">
-				<%= link_to("About", {:action => 'about'}, :class => 'static link')%>
-				<%= link_to("Contact", {:action => 'about'}, :class => 'static link')%>
-				<%= link_to("Privacy", {:action => 'privacy'}, :class => 'static link')%>
-				<%= link_to("Terms", {:action => 'terms'}, :class => 'static link')%>
-			</td>
-		</tr>
-	</table>
+"hello world!"
+
 </div>
