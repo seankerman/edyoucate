@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
 
-def index
+  def index
     @courses = Course.sorted
   end
 
@@ -64,7 +64,7 @@ def index
       # same as using "params[:course]", except that it:
       # - raises an error if :course is not present
       # - allows listed attributes to be mass-assigned
-      params.require(:course).permit(:name, :created_at)
+      params.require(:course).permit(:name, :start_date, :end_date, :course_times, :teacher_id, :price, :description, :address_line1, :address_line2, :city, :state, :zip, :created_at)
     end
   
   

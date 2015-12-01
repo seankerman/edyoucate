@@ -6,6 +6,50 @@
 		<td><%= f.text_field(:name) %></td>
 	</tr>
 	<tr>
+		<th> <%= f.label(:start_date, "Start Date") %></th>
+		<td><%= f.date_field(:start_date) %></td>
+	</tr>
+	<tr>
+		<th> <%= f.label(:end_date, "End Date") %></th>
+		<td><%= f.date_field(:end_date) %></td>
+	</tr>
+	<tr>
+		<th> <%= f.label(:course_times, "Course Times") %></th>
+		<td><%= f.text_area(:course_times) %></td>
+	</tr>
+	<tr>
+		<th> <%= f.label(:teacher_id, "Teacher ID") %></th>
+		<td><%= f.number_field(:teacher_id) %></td>
+	</tr>
+	<tr>
+		<th> <%= f.label(:price, "Price") %></th>
+		<td><%= f.text_field(:price) %></td>
+	</tr>
+	<tr>
+		<th> <%= f.label(:description, "Description") %></th>
+		<td><%= f.text_area(:description) %></td>
+	</tr>
+	<tr>
+		<th> <%= f.label(:address_line1, "Address line 1") %></th>
+		<td><%= f.text_field(:address_line1) %></td>
+	</tr>
+	<tr>
+		<th> <%= f.label(:address_line2, "Address Line 2") %></th>
+		<td><%= f.text_field(:address_line2) %></td>
+	</tr>
+	<tr>
+		<th> <%= f.label(:city, "City") %></th>
+		<td><%= f.text_field(:city) %></td>
+	</tr>
+	<tr>
+		<th> <%= f.label(:state, "State") %></th>
+		<td><%= f.text_field(:state) %></td>
+	</tr>
+	<tr>
+		<th> <%= f.label(:zip, "Zip") %></th>
+		<td><%= f.text_field(:zip) %></td>
+	</tr>
+	<tr>
 		<th><%= f.label(:created_at) %> </th>
 		<td> <%= f.datetime_select(:created_at, :order => [:month, :day, :year]) %> </td>
 	</tr>

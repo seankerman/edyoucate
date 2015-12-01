@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	has_many :courses #this is the courses they teach
 
 	has_secure_password
 	has_attached_file :image, styles: { large: "600x600>", medium: "300x300>", thumb: "100x100#"}
