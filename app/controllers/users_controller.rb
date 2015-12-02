@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class UsersController < ApplicationController  
   before_action :confirm_logged_in
   before_action :admin_only, :except => :show
 
@@ -69,6 +69,6 @@ class UsersController < ApplicationController
       # same as using "params[:subject]", except that it:
       # - raises an error if :subject is not present
       # - allows listed attributes to be mass-assigned
-      params.require(:user).permit(:first_name, :last_name, :image, :email, :username, :password, :created_at, :role)
+      params.require(:user).permit(:first_name, :last_name, :image, :email, :username, :password, :created_at, :role, :bio)
     end
 end
