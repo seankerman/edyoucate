@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'pages/terms'
 
   get 'pages/privacy'
+  get 'pages/list_courses'
 
   get 'courses/delete'
 

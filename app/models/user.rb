@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   						 :length => { :maximum => 25 }
 	validates :last_name, :presence => true,
 							:length => { :maximum => 50 }
-	validates :image, :attachment_presence => true
+	#validates :image, :attachment_presence => true
 	validates_attachment :image, :size => { :in => 0..10000.kilobytes}
 	validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 	validates :username, :presence => true,
