@@ -11,6 +11,16 @@
 
 
 
-<div class="create class">
-	<%= link_to("Create Class", {:controller => 'courses', :action => 'new', :id => @user.id}, :class => 'static link') %>
+
+<div class="user classes">
+	</br>
+	<h1> Classes I Teach </h1>
+	</br>
+	<% @user.courses.sorted.each do |course| %>
+		<%= link_to(course.name, :controller => 'courses', :action => "show", :id => course.id) %> </br>
+	<% end %>
+	<div class="create class">
+		<%= link_to("Create Class", {:controller => 'courses', :action => 'new', :id => @user.id}, :class => 'static link') %>
+	</div>
+
 </div>
